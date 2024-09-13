@@ -4,7 +4,7 @@ const app = express();
 
 app.use(express.json())
 
-app.post("/hdfcWebhook", async (req, res) => {
+app.post("/api/bank/hdfcWebhook", async (req, res) => {
     //TODO: Add zod validation here?
     //TODO: HDFC bank should ideally send us a secret so we know this is sent by them
     const paymentInformation: {
@@ -51,5 +51,13 @@ app.post("/hdfcWebhook", async (req, res) => {
     }
 
 })
+
+app.get("/api", (req, res) => {
+    res.json({
+        message:"Success"
+    })
+})
+
+
 
 app.listen(3003);
