@@ -5,7 +5,7 @@ export default function page() {
         <div className="w-full">
 
             <div className="text-4xl text-[#6a51a6] font-bold">
-                P2p
+                P2p LL
             </div>
             <SendCard />
         </div>
